@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="truth_db" uuid="49d59959-6655-4f4c-a3c4-a9a64ef6efec">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/truth_db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="extralayer" uuid="73783821-35f0-4a4a-b759-bbd7a2e3e6b5">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5433/extralayer</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="postgres" uuid="144e149c-6507-42a4-b23b-55164f618f4a">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5433/extralayer</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="ppc" uuid="a41e9f18-c4e7-44a7-991d-d55e9364009d">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5433/ppc</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="varmland_scs" uuid="e0478446-295b-41a3-b33b-1f08f0548f88">
+      <driver-ref>clickhouse</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.clickhouse.jdbc.ClickHouseDriver</jdbc-driver>
+      <jdbc-url>jdbc:clickhouse://hcp5rit7ea.eu-central-1.aws.clickhouse.cloud:8443/varmland_scs?ssl=true</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="AMCO - avlp_larisa" uuid="9fa4a121-3885-4f45-878d-67bb42d0d891" group="Ridango/AMCO">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.5.10.32:5432/avlp_lar</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="AFC-PROD-AGS" uuid="f1e10aad-5db8-4c13-b273-6d79b5ddb84c" group="Ridango/AGS">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:16432/afcp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="TMS-PROD-AGS" uuid="9d6b6bcd-bea5-46ad-88bb-180cb57ce02d" group="Ridango/AGS">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:16432/tmsp?stringtype=unspecified</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="OMAN - PROD - AFC" uuid="aa3b1b0d-b953-456d-b315-f1e523b227ab" group="Ridango/OMAN">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.215.215.62:5432/afcp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="OMAN - PROD - TMS" uuid="0be4bd2b-a6ab-47ec-b9e4-a702e5699b61" group="Ridango/OMAN">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.215.215.39:5432/tmsp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="OMAN - UAT - AFC" uuid="888e74ae-1164-4418-a60e-65eab8d6c21a" group="Ridango/OMAN">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.215.215.20:5432/afcu</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="OMAN - UAT - TMS" uuid="2965c464-924c-4c9d-a345-3c2a0235c167" group="Ridango/OMAN">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.215.215.20:5432/tmsu</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="OLD -------------------------Dubai - GTMS" uuid="1f9abc57-a17f-4b4a-a8d3-e3532b0810a9" group="Ridango/DUBAI">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5454/gtms</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Dubai - PPCP" uuid="ad78a35f-6d23-4a91-b976-d6231220e55f" group="Ridango/DUBAI">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/ppcp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="BAKU-PROD-AFC (REPLICA)" uuid="7dccf656-9e16-4f1f-ba5e-0b37d4aff9b2" group="Ridango/BAKU">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.10.165.2:5432/afcp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Main DB - BAKU-PROD-TMS" uuid="8c74a2f1-4f93-420f-a4d7-5928a6f735a5" group="Ridango/BAKU">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.10.155.1:5432/avlp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="HUBLI - TMS - PROD" uuid="92aaabb0-2a12-4505-b16c-c78ece18bec5" group="Ridango/HUBLI">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://172.16.10.67:5432/tmsp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="HUBLI - AFC - PROD" uuid="df942b6f-8a09-414a-98fe-8d672dd73079" group="Ridango/HUBLI">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://172.16.10.63:5432/afcp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="KERKURA - GRČIJA" uuid="2d0b4c1e-79de-4777-bd91-b17dfcb38cb4" group="Ridango/KERKURA - GRČIJA">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:8484/avlp_ker</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="HUBLI - UAT - AFC" uuid="0148f986-bbbd-424d-93f8-e9b336674866" group="Ridango/HUBLI">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.0.132:5432/afcdb</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Bettereta" uuid="861e81f8-b9e7-49d1-805e-a7c0d0547031" group="Ridango/DUBAI">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5454/bettereta</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="HUBLI - UAT - TMS" uuid="8ed9d32c-4b44-43fe-aa46-5502498802b1" group="Ridango/HUBLI">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.0.135:5432/tmsu</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="afc_80_qa_makkah" uuid="e93efec4-bfe6-4e15-87d5-5ae8b8425b57" group="Ridango/QA">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.5.5.60:5432/afc_80_qa_makkah</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="BAKU-UAT-TMS" uuid="05449903-49a7-4f27-9caa-43332ffe250b" group="Ridango/BAKU">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.10.156.3:5432/avlu</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="BAKU-UAT-AFC" uuid="60abbc46-a015-46b0-8b9f-b61830a7311f" group="Ridango/BAKU">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.10.166.30:5432/afcu</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="MAKKAH-UAT-AFC" uuid="45fcc821-6a9b-4ff1-8c7b-fe4568245038" group="Ridango/MAKKAH ">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.42.1.115:5432/afcu</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="MAKKAH-UAT-TMS" uuid="c01d00ab-111b-46fe-8f4b-e3401f68e191" group="Ridango/MAKKAH ">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.42.1.115:5432/avlu</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="MAKKAH-UAT-PPC" uuid="e29f08a0-9795-4356-b82d-179e55c42121" group="Ridango/MAKKAH ">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.42.1.115:5432/dcms_vps</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="mtbu" uuid="12dfc004-4b39-46d5-afc9-e6c6b8ffab24" group="Ridango/MAKKAH ">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.42.1.115:5432/mtbu</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Za DEMO ROOM" uuid="83e75a81-5df9-44c0-b8e5-9d682415ac71" group="Ridango/Demo Room">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:17432/tmsp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Dubai - GTMS" uuid="7897117f-6dd8-46e6-ad26-f59010ea8bb1" group="Ridango/DUBAI">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/gtms</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="MAKKAH-PROD-AFC" uuid="9c7559eb-1d03-4f13-b9dc-1b17643c98a0" group="Ridango/MAKKAH ">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.24.1.45:5432/afcp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Tallin AVL " uuid="d2849c11-ff11-4c98-948e-291c558aed76" group="Ridango/TALLINN">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.24.163:5432/tallinn_tlt_tms</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Adventura - Tableaulin - TMS-DEMO-REPORTS" uuid="bfb385d8-05d1-4d42-af35-0e5aa47f4689" group="Ridango/Adventura">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5999/gtms</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="BAKU-PROD-TMS - REPLIKA" uuid="3bff831c-d9bd-4c8b-8c1d-0c7d5e5fb332" group="Ridango/BAKU">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.10.155.11:5432/avlp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="MOWASALAT-PROD-TMS MAIN" uuid="89925ae5-f9ff-4d33-bbdd-602ebb5f7114" group="Ridango/X_Latest Most Used/MOWASALAT">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://172.16.21.4:5432/tms</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="MOWASALAT-UAT-TMS" uuid="d04e3ffb-c13f-477c-802d-13613b085567" group="Ridango/X_Latest Most Used/MOWASALAT">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://172.16.11.23:5432/tms</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Sarjah AFC" uuid="e0a5eaf8-00ad-4a63-b764-25efa73c2411" group="Ridango/Sharjah">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.24.167:5432/afc_srta_demo</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Sarjah TMS" uuid="5fb4ebb8-5fa0-4cb5-bc3e-76993aa06254" group="Ridango/Sharjah">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.24.167:5432/avl_srta_dev</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="BAKU-PROD-AFC (MAIN)" uuid="0e6539c7-b13e-4319-bb7b-a290ba78d9af" group="Ridango/BAKU">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.10.165.2:5432/afcp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="kuwaitafcdev " uuid="4cfdf09a-e491-44fd-9013-c6946250695d" group="Ridango/Kuwait">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://generic-pg12.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/kuwaitafcdev</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="kuwaitafcprod" uuid="82c09f98-9d45-48c4-9c52-04e6a81ce3ba" group="Ridango/Kuwait">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://kuwait-production-database-frankfurt.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/kuwaitafcprod</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="mtbp" uuid="b719ec5b-90c0-4894-8275-1c039de5fc5f" group="Ridango/MAKKAH ">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.24.1.34:5432/mtbp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="sync" uuid="61dc23bd-0138-41a3-a17f-8c91950657a3" group="Ridango/Ridango Development">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://sync.test.ridango.io:5435/sync</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="sync" uuid="dd6ca312-f03c-48d5-b8fe-7a3f3ff97a35" group="Ridango/Ridango PROD">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://sync-db.tln1-live.ridango.io:5435/sync</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="stats" uuid="6c0777f6-7724-4173-8fe2-f1609c37de2f" group="Ridango/Ridango PROD">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://stats-db.tln1-live.ridango.io:5437/stats</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="tataavldemo" uuid="f1d47e5d-99fa-45a9-85b1-af328ee4c583" group="Ridango/TATA POC">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://generic-pg12.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/maasafcdemo</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="afcp" uuid="ef5df759-9625-450b-a719-6dda3915d2df" group="Ridango/Malam">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://;serverName=140.9.12.103;databaseName=afcp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="vilniusavlprod" uuid="38b1cf18-cd4a-4a82-8d3d-f5c8326e104e" group="Ridango/TATA POC">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://production-pg.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/vilniusavlprod</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="kuwaitafcprod 2" uuid="7ece1010-0469-4a21-8258-5d4da44071ed" group="Ridango/kuwait PROD">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://uae-production-database.cdqavkn32b1b.me-central-1.rds.amazonaws.com:5432/kuwaitafcprod</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="AVL kuwait prod" uuid="9d47c357-796b-460f-b152-a01905f1fe34" group="Ridango/kuwait PROD">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://uae-production-database.cdqavkn32b1b.me-central-1.rds.amazonaws.com:5432/gtms</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="panevezys AVL PROD" uuid="26d27a8b-e989-4871-8c5e-edf0d8de36d2" group="Ridango/Panevezys">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://production-pg.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/panevezysavlprod</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="denverapp" uuid="8497993d-d7d5-421b-84eb-45eea28cfb9d" group="Ridango/AWS - DEV">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://generic-pg12.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/postgres</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="gtms" uuid="0115bfc7-001e-46f4-9803-def331b58023" group="Ridango/Lost Boyz">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:15432/gtms</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="avlp" uuid="5702cd92-5112-43d3-8db8-59740f44a353" group="Ridango/Lost Boyz">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.42.2.111:5432/avlp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="vilniusavlprod 2" uuid="9a8bc0c2-6f86-40af-8f73-b4c310de0bd5" group="Ridango/Vilnius">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://production-pg.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/vilniusavlprod</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="stats_vln" uuid="8e81ee73-562e-4240-bfcd-4270fb88c0cc" group="Ridango/Ridango db live">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://stats-db.tln1-live.ridango.io:5436/stats</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="sync_vln" uuid="52c17bd4-409d-4451-a0da-040aeed71ea4" group="Ridango/Ridango db live">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://sync.tln1-live.ridango.io:5435/sync_vln</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PROD" uuid="5b99602c-503e-4f6c-9b91-71356d9c3f59" group="Ridango/Hafil">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.229.236.158:5432/postgres</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="DEV" uuid="35aeed2a-2182-44c4-8f74-c617db744b91" group="Ridango/Hafil">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.229.236.15:5432/postgres</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="MAKKAH-PROD-TMS" uuid="b4c1532b-32c3-415a-8f20-7427cf36c65f" group="Ridango/MAKKAH ">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.24.1.40:5432/avlp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="cphsm" uuid="b5a7c4c7-34a5-44d7-86eb-9f486e177b8f" group="Ridango/BAKU">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.10.165.30:5432/cphsm</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="maasafcdemo" uuid="ac98eaad-6fe7-4631-8438-37fa15fcb27b" group="Ridango/Maas">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://generic-pg12.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/maasafcdemo</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="maasmtbdemo" uuid="665684c9-9e3b-4a18-b3ac-693d756cd6e6" group="Ridango/Maas">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://generic-pg12.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/maasmtbdemo</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Sync Tallin" uuid="b700f703-1a41-4c3f-8d42-c4beb85402df" group="Ridango/TALLINN">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://sync-db.tln1-live.ridango.io:5434/sync</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Stats Tallin" uuid="6b3c5778-2e1b-492e-a5fc-73d4629ba051" group="Ridango/TALLINN">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://stats-db.tln1-live.ridango.io:5437/stats</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Makkah AVLP 2023 backup" uuid="98b4144a-011a-4273-8dcf-2159a5bf6b6e" group="Ridango/MAKKAH ">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.42.2.115:5432/avlp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="localhost" uuid="0b6d81fd-bf09-4490-a95a-6b16ecc88107" group="Ridango/Lost Boyz">
+      <driver-ref>clickhouse</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.clickhouse.jdbc.ClickHouseDriver</jdbc-driver>
+      <jdbc-url>jdbc:clickhouse://localhost:8123</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="pulsar_manager" uuid="17523325-01a5-4c35-8556-bbf08af26875" group="Ridango/Lost Boyz">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/pulsar_manager</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="dev" uuid="caf4916d-a581-407b-b55d-68a8198058bb" group="Ridango/Lost Boyz">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:redshift://sandbox-redshift.c2dbmkuvxbnw.eu-central-1.redshift.amazonaws.com:5439/dev</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="default" uuid="1e15d0ae-ac83-4557-a19a-7a2549c32f19" group="Ridango/Lost Boyz">
+      <driver-ref>clickhouse</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.clickhouse.jdbc.ClickHouseDriver</jdbc-driver>
+      <jdbc-url>jdbc:clickhouse://10.24.1.51:8123/default</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="test_db" uuid="c2f00fd9-ba05-4394-9992-dcd8773da039" group="Ridango/Lost Boyz">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/test_db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="postgres 2" uuid="08b552d1-1d8a-4931-95a3-de25fe1c7a5d" group="Ridango/Adventura">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="stats 2" uuid="cafa6cd4-508b-46d3-a6b2-710af82b12ac" group="Ridango/Ridango Development">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://stats-db.test.ridango.io:5436/stats</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="AWS PROD" uuid="841150f5-4bb5-45d9-80bc-7bf6aa6973db" group="Ridango/X_Latest Most Used">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://production-pg.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/meridaavlprod</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="woring new afc" uuid="0886ac4c-c26d-42e7-abfa-84cdf585f174" group="Ridango/X_Latest Most Used">
+      <driver-ref>clickhouse</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.clickhouse.jdbc.ClickHouseDriver</jdbc-driver>
+      <jdbc-url>jdbc:clickhouse://q8xip0f23e.eu-central-1.aws.clickhouse.cloud:8443/default?ssl=true</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="avlp 2" uuid="43461f36-5909-4059-8eb8-d344daf02898" group="Ridango/Lost Boyz">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.24.1.40:5432/avlp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="varmland_scs" uuid="161fdad0-64a3-415c-9c21-d411237a04cc" group="Ridango/X_Latest Most Used">
+      <driver-ref>clickhouse</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.clickhouse.jdbc.ClickHouseDriver</jdbc-driver>
+      <jdbc-url>jdbc:clickhouse://s4r4d8o92m.eu-central-1.aws.clickhouse.cloud:8443/default?ssl=true</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="merida_avl_tableau_user" uuid="c7aa6d5a-5ca1-4b30-9d5c-e6320c2fe701" group="Ridango/X_Latest Most Used">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://production-pg.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/meridaavlprod</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="SRTA AVL PROD" uuid="624baa5c-f1b3-4177-babd-3797d7533ebd" group="Ridango/Sharjah">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://srtaprdavlafcmtbdatabase.postgres.database.azure.com:5432/srtaavlprod</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="STAR PROD AFC" uuid="3b5809b7-7ad9-4382-807a-73a2e33f160d" group="Ridango/Sharjah">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://srtaprdavlafcmtbdatabase.postgres.database.azure.com:5432/srtaafcprod</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="localhost 3" uuid="d87dc0e1-c230-4276-8d95-3481cc1414ff" group="Ridango">
+      <driver-ref>clickhouse</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.clickhouse.jdbc.ClickHouseDriver</jdbc-driver>
+      <jdbc-url>jdbc:clickhouse://q8xip0f23e.eu-central-1.aws.clickhouse.cloud:8443/default?ssl=true</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="default 2" uuid="f9528c6c-7f3f-4c3d-ad96-567baf5deeba" group="Ridango">
+      <driver-ref>clickhouse</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.clickhouse.jdbc.ClickHouseDriver</jdbc-driver>
+      <jdbc-url>jdbc:clickhouse://localhost:6565/default</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="postgres" uuid="66ddd2d1-b27c-462f-8e7e-00e43ded29dd" group="Ridango">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://generic-pg12.c78e6fsby5s4.eu-central-1.rds.amazonaws.com:5432/postgres</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="VeloDB" uuid="f8b4b2a3-0c79-4099-9184-5711dce252a9" group="Ridango">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://lb-11973637-47a7c428df900860.elb.eu-central-1.amazonaws.com:9030/jira</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="lb-65046533-579518abc9e8f174.elb.eu-central-1.amaz" uuid="8420fcd4-9018-4e43-8524-6ea24e1487e6" group="Ridango">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://lb-65046533-579518abc9e8f174.elb.eu-central-1.amazonaws.com:9030/</jdbc-url>
+    </data-source>
+  </component>
+</project>
