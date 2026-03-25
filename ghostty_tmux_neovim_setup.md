@@ -18,7 +18,12 @@ configs/
   tmux.conf                           -> ~/.tmux.conf
   zshrc                               -> ~/.zshrc
   nvim/init.lua                       -> ~/.config/nvim/init.lua
-  nvim/lua/kickstart/plugins/neo-tree.lua -> ~/.config/nvim/lua/kickstart/plugins/neo-tree.lua
+  nvim/lazyvim.json                   -> ~/.config/nvim/lazyvim.json
+  nvim/lua/config/lazy.lua            -> ~/.config/nvim/lua/config/lazy.lua
+  nvim/lua/config/options.lua         -> ~/.config/nvim/lua/config/options.lua
+  nvim/lua/config/keymaps.lua         -> ~/.config/nvim/lua/config/keymaps.lua
+  nvim/lua/config/autocmds.lua        -> ~/.config/nvim/lua/config/autocmds.lua
+  nvim/lua/plugins/neo-tree.lua       -> ~/.config/nvim/lua/plugins/neo-tree.lua
 dev                                   -> ~/.local/bin/dev
 tmux-sessionizer                      -> ~/.local/bin/tmux-sessionizer
 install.sh                            — one-command setup
@@ -326,7 +331,7 @@ Prefix is `Ctrl+a` (not the default `Ctrl+b`).
 
 ---
 
-## 7. Neovim Setup (kickstart.nvim)
+## 7. Neovim Setup (LazyVim)
 
 ### Install
 ```bash
@@ -340,29 +345,36 @@ sudo npm install -g tree-sitter-cli
 
 # ripgrep (needed by telescope for live grep / search in files)
 sudo apt install ripgrep
+```
 
-# Clone kickstart.nvim (minimal, batteries-included starter config)
-git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim
+### Config Structure
+LazyVim is a full IDE layer on top of Neovim powered by lazy.nvim. Our config lives in `configs/nvim/`:
+```
+nvim/
+├── init.lua              # Bootstraps lazy.nvim
+├── lazyvim.json          # LazyVim version/extras tracking
+└── lua/
+    ├── config/
+    │   ├── lazy.lua      # lazy.nvim + LazyVim setup
+    │   ├── options.lua   # Custom options
+    │   ├── keymaps.lua   # Custom keymaps
+    │   └── autocmds.lua  # Custom autocmds
+    └── plugins/
+        └── neo-tree.lua  # Ctrl+N toggle override
 ```
 
 ### First Launch
-Open neovim once to auto-install all plugins:
+Open neovim once — LazyVim will auto-install all plugins:
 ```bash
 nvim
 ```
 Wait for downloads to finish, then quit with `:q`.
 
-### Enable Bundled Plugins
-Edit `~/.config/nvim/init.lua` and uncomment these lines (~line 912):
-```lua
-  require 'kickstart.plugins.indent_line',
-  require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.neo-tree',
-  require 'kickstart.plugins.gitsigns',
-```
+### Adding Language Support (Extras)
+Inside neovim, run `:LazyExtras` to browse and enable language-specific extras (Python, TypeScript, Java, etc.). These automatically configure LSP, formatters, linters, and treesitter for each language.
 
 ### File Explorer (Neo-tree)
-Press `Ctrl+n` to toggle the file explorer sidebar.
+LazyVim includes Neo-tree by default. Press `Ctrl+n` to toggle the file explorer sidebar (custom keybinding preserved from old config).
 
 | Action (inside Neo-tree) | Key |
 |---|---|
@@ -377,17 +389,17 @@ Press `Ctrl+n` to toggle the file explorer sidebar.
 | Paste | `p` |
 | Close explorer | `Ctrl+n` |
 
-### Neovim Keyboard Shortcuts (kickstart defaults)
+### Neovim Keyboard Shortcuts (LazyVim defaults)
 
 **File Navigation:**
 
 | Action | Shortcut |
 |--------|----------|
-| File explorer toggle | `Ctrl+n` |
-| Fuzzy find files | `<Space>sf` |
-| Fuzzy grep (search in files) | `<Space>sg` |
-| Switch open buffers | `<Space><Space>` (double space) |
-| Recent files | `<Space>s.` |
+| File explorer toggle | `Ctrl+n` (custom) or `<Space>e` |
+| Fuzzy find files | `<Space><Space>` or `<Space>ff` |
+| Fuzzy grep (search in files) | `<Space>sg` or `<Space>/` |
+| Switch open buffers | `<Space>,` |
+| Recent files | `<Space>fr` |
 | Jump between explorer and file | `Ctrl+w h` / `Ctrl+w l` |
 
 **Code Navigation (requires LSP):**
@@ -396,7 +408,7 @@ Press `Ctrl+n` to toggle the file explorer sidebar.
 |--------|----------|
 | Go to definition | `gd` |
 | Go to declaration | `gD` |
-| Go to implementation | `gi` |
+| Go to implementation | `gI` |
 | Find all references (usages) | `gr` |
 | Hover docs | `K` |
 | Go back | `Ctrl+o` |
@@ -406,9 +418,9 @@ Press `Ctrl+n` to toggle the file explorer sidebar.
 
 | Action | Shortcut |
 |--------|----------|
-| Rename symbol | `<Space>rn` |
+| Rename symbol | `<Space>cr` |
 | Code action (quick fix) | `<Space>ca` |
-| Format file | `<Space>f` |
+| Format file | `<Space>cf` |
 | Next diagnostic | `]d` |
 | Previous diagnostic | `[d` |
 | Find & replace in file | `:%s/old/new/g` |
@@ -431,16 +443,15 @@ Press `Ctrl+n` to toggle the file explorer sidebar.
 | Go to line 42 | `42G` |
 | Search in file | `/something` then `n` for next |
 
-`<Space>` is the leader key. Press it and wait — a popup shows all available commands.
+`<Space>` is the leader key. Press it and wait — which-key popup shows all available commands.
 
 ### LSP Servers (auto-installed via Mason)
-- **pyright** — Python
-- **ts_ls** — TypeScript/JavaScript
-- **jdtls** — Java
-- **sqlls** — SQL
-- **lua_ls** — Lua
-
-These enable go-to-definition, find references, hover docs, rename, etc. for each language.
+LazyVim auto-configures Mason. Enable language extras via `:LazyExtras` for full LSP support. Common extras:
+- `lang.python` — pyright + ruff
+- `lang.typescript` — ts_ls + eslint
+- `lang.java` — jdtls
+- `lang.json` — jsonls
+- `lang.lua` — lua_ls
 
 ---
 
@@ -458,10 +469,11 @@ These enable go-to-definition, find references, hover docs, rename, etc. for eac
 - The sessionizer (`C-a f`) scans `~/Documents`, `~/projects`, and `~` — edit `~/.local/bin/tmux-sessionizer` to add more directories.
 - If Shift+Enter doesn't work in Claude Code inside tmux, make sure `extended-keys` is in the config and **kill tmux fully** (`tmux kill-server`) then restart — `C-a r` reload is not enough for this setting.
 - To select/copy text with mouse inside tmux, hold `Shift` while clicking and dragging — this bypasses tmux mouse mode.
-- First time opening neovim takes a while — it downloads all plugins. Let it finish.
+- First time opening neovim takes a while — LazyVim downloads all plugins. Let it finish.
 - If neovim looks broken, run `:Lazy sync` inside neovim to re-sync plugins.
-- Press `<Space>` (leader key) and wait — a popup shows all available commands.
-- Neo-tree file explorer toggles with `Ctrl+n`.
+- Press `<Space>` (leader key) and wait — which-key popup shows all available commands.
+- Neo-tree file explorer toggles with `Ctrl+n` (custom) or `<Space>e` (LazyVim default).
 - To jump between explorer and file: `Ctrl+w h` (left) and `Ctrl+w l` (right).
-- Switch between open files with `<Space><Space>` (double space — fuzzy buffer list).
+- Switch between open files with `<Space>,` (buffer picker) or `<Space><Space>` (find files).
+- Enable language support via `:LazyExtras` inside neovim — don't manually configure LSP servers.
 - Ubuntu apt neovim is too old (0.9) — must use PPA for 0.11+.

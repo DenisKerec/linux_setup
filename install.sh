@@ -70,20 +70,24 @@ else
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
-# --- 6. Install kickstart.nvim ---
-echo "[6/8] Installing kickstart.nvim..."
+# --- 6. Install LazyVim ---
+echo "[6/8] Installing LazyVim config..."
 if [ -d "$HOME/.config/nvim" ]; then
-    echo "  -> neovim config already exists, skipping"
-else
-    git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim
-    echo "  -> kickstart.nvim -> ~/.config/nvim"
+    echo "  -> neovim config already exists, backing up to ~/.config/nvim.bak"
+    mv ~/.config/nvim ~/.config/nvim.bak.$(date +%s)
 fi
 
-# Apply our customizations on top of kickstart
-echo "  -> Applying neovim customizations..."
+# Copy our LazyVim config
+mkdir -p ~/.config/nvim/lua/config
+mkdir -p ~/.config/nvim/lua/plugins
 cp "$SCRIPT_DIR/configs/nvim/init.lua" ~/.config/nvim/init.lua
-cp "$SCRIPT_DIR/configs/nvim/lua/kickstart/plugins/neo-tree.lua" ~/.config/nvim/lua/kickstart/plugins/neo-tree.lua
-echo "  -> init.lua (plugins enabled) + neo-tree.lua (Ctrl+n toggle)"
+cp "$SCRIPT_DIR/configs/nvim/lazyvim.json" ~/.config/nvim/lazyvim.json
+cp "$SCRIPT_DIR/configs/nvim/lua/config/lazy.lua" ~/.config/nvim/lua/config/lazy.lua
+cp "$SCRIPT_DIR/configs/nvim/lua/config/options.lua" ~/.config/nvim/lua/config/options.lua
+cp "$SCRIPT_DIR/configs/nvim/lua/config/keymaps.lua" ~/.config/nvim/lua/config/keymaps.lua
+cp "$SCRIPT_DIR/configs/nvim/lua/config/autocmds.lua" ~/.config/nvim/lua/config/autocmds.lua
+cp "$SCRIPT_DIR/configs/nvim/lua/plugins/neo-tree.lua" ~/.config/nvim/lua/plugins/neo-tree.lua
+echo "  -> LazyVim config -> ~/.config/nvim (with Ctrl+n neo-tree toggle)"
 
 # --- 7. Install scripts ---
 echo "[7/8] Installing scripts..."
@@ -113,7 +117,7 @@ echo "  1. Install Ghostty from https://ghostty.org (not in apt)"
 echo "  2. Install Claude Code: npm install -g @anthropic-ai/claude-code"
 echo "  3. Log out and back in (for zsh to take effect)"
 echo "  4. Open tmux and press C-a I to install tmux plugins"
-echo "  5. Open neovim once (nvim) to install plugins, then quit (:q)"
-echo "  6. In ~/.config/nvim/init.lua, uncomment neo-tree and other plugins"
+echo "  5. Open neovim once (nvim) — LazyVim will auto-install all plugins, then quit (:q)"
+echo "  6. Use :LazyExtras inside neovim to enable language-specific extras"
 echo "  7. Type 'dev' to start your dev session"
 echo ""
