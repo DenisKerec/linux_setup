@@ -6,17 +6,27 @@ require("lazy").setup({
   spec = {
     -- Import LazyVim and its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+
+    -- Language extras
+    { import = "lazyvim.plugins.extras.lang.java" },
+    { import = "lazyvim.plugins.extras.lang.python" },
+    { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.sql" },
+
+    -- Formatting
+    { import = "lazyvim.plugins.extras.formatting.prettier" },
+
     -- Import your custom plugins
     { import = "plugins" },
   },
   defaults = {
     lazy = false,
-    version = false, -- always use the latest git commit
+    version = false,
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = {
-    enabled = true, -- check for plugin updates periodically
-    notify = false, -- don't notify on updates
+    enabled = true,
+    notify = false,
   },
   performance = {
     rtp = {
