@@ -2,7 +2,12 @@
 
 ## Install
 
+Installed automatically by `install.sh` via snap. Manual install:
 ```bash
+# Linux
+sudo snap install datagrip --classic
+
+# macOS
 brew install --cask datagrip
 ```
 

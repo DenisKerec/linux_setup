@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="DB-252.26830.46">
+    <data-source name="dwh - clickhouse" uuid="871b1479-cbba-4bd5-b56b-700a0c339b23">
+      <database-info product="ClickHouse" version="25.8.1.8583" jdbc-version="0.8" driver-name="ClickHouse JDBC Driver" driver-version="0.8.6" dbms="CLICKHOUSE" exact-version="25.8.1.8583" exact-driver-version="0.8">
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>default</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="avl_merida_prod" />
+            <name qname="avl_sormland_prod" />
+            <name qname="orebro_scs" />
+            <name qname="ridango_scs" />
+            <name qname="varmland_scs" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="RDS - ridango PROD" uuid="8234c84f-18b6-4e4d-953b-def1b4235edf">
+      <database-info product="PostgreSQL" version="17.5" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="17.5" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node negative="1">
+            <node kind="database" qname="@">
+              <node kind="schema" qname="@" />
+            </node>
+            <node kind="database">
+              <name qname="arrivaavlprod" />
+              <name qname="kranjafcprod" />
+              <name qname="meridaavlprod" />
+              <name qname="tartuavlprod" />
+              <name qname="vilniusavlprod" />
+              <name qname="ytkpohjaavlprod" />
+              <node kind="schema" negative="1" />
+            </node>
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="test@3.71.97.177" uuid="12f7cba0-0fe5-4fe6-852b-7a3554715f26">
+      <database-info product="MySQL" version="8.0.33" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.33" exact-driver-version="8.2">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" negative="1" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="ppcp@localhost" uuid="57f40f77-3ea1-4801-8c50-c204c8fe8d1c">
+      <database-info product="PostgreSQL" version="15.14" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="15.14" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>tm_ppc</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node negative="1">
+            <node kind="database" negative="1" />
+            <node kind="database" qname="@">
+              <node kind="schema" negative="1" />
+            </node>
+            <node kind="database" qname="gtms">
+              <node kind="schema" qname="public" />
+            </node>
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="afcp@10.24.1.40" uuid="dca1dfa7-1249-431c-9420-cc6146167630">
+      <database-info product="PostgreSQL" version="17.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="17.4" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>tm_avl</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node negative="1">
+            <node kind="database" qname="@">
+              <node kind="schema" qname="@" />
+            </node>
+            <node kind="database">
+              <name qname="fraudp" />
+              <name qname="postgres" />
+            </node>
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="avlp@10.24.1.40" uuid="4bb26146-4873-41f4-b581-6d1fbb56bb54">
+      <database-info product="PostgreSQL" version="17.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="17.4" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>tm_avl</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node negative="1">
+            <node kind="database" negative="1" />
+            <node kind="database" qname="avlp">
+              <node kind="schema" negative="1" />
+            </node>
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="truth_db" uuid="55332791-007f-41cd-a961-9e6f78e8afc4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="extralayer" uuid="ae2406ed-a426-4001-8815-de9c0247335e">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="postgres" uuid="21e39019-472e-40f7-8a81-31086c9d98d3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="ppc" uuid="d862a627-699d-4e1d-af5b-4d7d97c9d474">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="varmland_scs" uuid="de673c4c-ee0d-45ed-8094-a586fc1705a7">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="CLICKHOUSE" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="AMCO - avlp_larisa" uuid="92fb74cc-767c-403b-9d81-b071d7b5a465">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="AFC-PROD-AGS" uuid="83fe42d9-1c48-4294-8da8-834053330a8b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="TMS-PROD-AGS" uuid="e5fb759b-f2cb-4635-a6ca-db32e26d9c48">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="OMAN - PROD - AFC" uuid="b14a02da-924d-4849-a2e6-2d76e1a161b7">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="OMAN - PROD - TMS" uuid="ff942628-a495-43e7-adfd-664aa1eafd51">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="OMAN - UAT - AFC" uuid="5b6abdbb-17d0-4d07-aa10-21d428708d84">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="OMAN - UAT - TMS" uuid="a60d0df8-0000-4ad9-93d4-bfbff0287aed">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="OLD -------------------------Dubai - GTMS" uuid="d5dd6d82-1d22-4d14-9b0c-a7ca4602e160">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="BAKU-PROD-AFC (REPLICA)" uuid="e342c69d-2fa1-41b8-af2a-f4df44e3b7a1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Main DB - BAKU-PROD-TMS" uuid="fb57e3bb-ed0f-4f1a-800d-ee9693cc8a5f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="HUBLI - TMS - PROD" uuid="89a804e1-bd2c-4d14-b30e-823621564784">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="HUBLI - AFC - PROD" uuid="a5970ea5-acca-4587-be06-1ed92c84b71b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="KERKURA - GRČIJA" uuid="b8ec7175-43cd-43b2-b117-1aa625282496">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="HUBLI - UAT - AFC" uuid="a0b03a88-1c85-498b-a449-96499552f47c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Bettereta" uuid="48d99b4c-1dcc-4543-986e-04d5e456614f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="HUBLI - UAT - TMS" uuid="08c4bb32-96f5-4cda-b14b-06abd8a59b6d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="afc_80_qa_makkah" uuid="1b4faa50-9984-436e-bc58-dfe54a89903d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="BAKU-UAT-TMS" uuid="7d692ae8-54e2-4c3c-a9de-fa3aa2182d30">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="BAKU-UAT-AFC" uuid="7306136d-995c-4758-ba78-20d728197297">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="MAKKAH-UAT-AFC" uuid="4e727f0b-8764-4319-9be8-85e602260264">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="MAKKAH-UAT-TMS" uuid="74c2c6aa-dc9e-4698-a7e4-b4a2ba60eb2b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="MAKKAH-UAT-PPC" uuid="5ff847a0-b306-4b2a-b0c9-e764e535812a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="mtbu" uuid="edc97c1c-e5a2-4108-bcf6-57d7a2e6e895">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Za DEMO ROOM" uuid="6d93ac61-295c-4579-be44-3a0eb939ba8e">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Dubai - GTMS" uuid="86f5251d-4d14-437e-83d1-3c70cc42f22a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="MAKKAH-PROD-AFC" uuid="aa031dd9-fc1d-43c7-b0bd-e947d1213a07">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Tallin AVL " uuid="dd9b8a45-c5d6-45c1-b933-04f705135782">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Adventura - Tableaulin - TMS-DEMO-REPORTS" uuid="db5fd505-c23f-4eca-b83e-39df4dff90a2">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="BAKU-PROD-TMS - REPLIKA" uuid="66bc5656-74bc-490d-a9e2-c645f77a0c45">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="MOWASALAT-PROD-TMS MAIN" uuid="0039cab5-fd08-46a1-817c-70edcb60aa90">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="MOWASALAT-UAT-TMS" uuid="67227f33-ebbf-41a8-a753-ed5a0c56a414">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Sarjah AFC" uuid="05810581-4528-4da3-a68b-a3a0f7f5afdf">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Sarjah TMS" uuid="1fb65b2e-c894-48ba-9add-21495f393626">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="BAKU-PROD-AFC (MAIN)" uuid="b248c927-5bf8-4195-86f0-407b97861f2e">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="kuwaitafcdev " uuid="914cb0b1-d112-43a0-bc4d-f68d1640beb1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="kuwaitafcprod" uuid="0922ba0c-63a4-4f12-b793-19aa06c095e7">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="mtbp" uuid="36f695eb-0152-480c-bd77-85ebba7891de">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="sync" uuid="fb89575d-cad8-4ac2-8004-339a0c888e95">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="sync" uuid="32faf318-fbeb-4a92-8fda-563c09194bce">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="stats" uuid="fa17f96c-43dd-4056-ad76-775b50a7ad09">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="tataavldemo" uuid="d949626e-c5e1-428c-b456-403b30dab6b3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="afcp" uuid="13755399-50bd-47d6-9847-7824de625b02">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MSSQL" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="vilniusavlprod" uuid="17c79910-820f-401a-9422-d2d5dc2cfb36">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="kuwaitafcprod 2" uuid="f8babc07-600b-4bfe-a33d-362bccbbe082">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="AVL kuwait prod" uuid="f7d27263-c5a5-43a8-b398-aea83b67fd2c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="panevezys AVL PROD" uuid="487319c2-429d-493c-9b44-f33fdddb8cd1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="denverapp" uuid="e673b1b3-35ae-4934-a6b9-cd31d65cc1a7">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="gtms" uuid="98f29224-02f9-4def-8cd2-80cb61cc5453">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="avlp" uuid="fa008c3f-04f7-4a7b-8d73-4d288044e5f4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="vilniusavlprod 2" uuid="c46be092-36a7-4346-9e40-79a3af583344">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="stats_vln" uuid="6f65fba1-d33d-46a5-bc63-72c8b182fe5f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="sync_vln" uuid="3e426a57-8e97-493c-857d-4b9b9329883d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="PROD" uuid="cc2a5f6f-83d6-49d7-96dd-f22b95b0b0ca">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="DEV" uuid="d7ed9c40-60d9-40c7-ba70-251a29f11d2b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="cphsm" uuid="f001df29-ad84-4689-80f1-34f958bac82a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="maasafcdemo" uuid="7f733f6f-80a1-4bc3-ada1-5401a82760c9">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="maasmtbdemo" uuid="ef583586-c862-4b66-901e-396d2bf8729c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Sync Tallin" uuid="221c5061-7488-40f4-8909-6c70c37923f0">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Stats Tallin" uuid="40680ef4-8a9c-4553-a99a-bda0d0c497d9">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="Makkah AVLP 2023 backup" uuid="dd99e6d1-837b-4dd0-886e-73d12e62a5f3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="localhost" uuid="1b1e4333-53ca-4e17-938c-274d6b39bc20">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="CLICKHOUSE" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="pulsar_manager" uuid="3569bfc4-396e-498f-8a2d-524afadae3a4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="dev" uuid="0f9aa0eb-a6c9-4792-9785-f9c9e7e61bf8">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="default" uuid="ed0ffea1-e28b-4cbf-ac7e-2ed332045103">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="CLICKHOUSE" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="test_db" uuid="b3ccd525-91a1-4b2b-967c-a183e7b9925f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="postgres 2" uuid="ea5e0ce8-4e61-42da-8905-67663322279d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="stats 2" uuid="78b6bd62-64f8-4b44-b082-d8d15c51ff74">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="AWS PROD" uuid="b2714fc7-a88d-449f-8747-e4d0e2c24910">
+      <database-info product="PostgreSQL" version="17.5" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="17.5" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node negative="1">
+            <node kind="database" negative="1" />
+            <node kind="database" qname="@">
+              <node kind="schema" negative="1" />
+            </node>
+            <node kind="database" qname="arrivaavlprod">
+              <node kind="schema">
+                <name qname="partition" />
+                <name qname="public" />
+                <name qname="reporting" />
+              </node>
+            </node>
+          </node>
+        </introspection-scope>
+        <substitutions use-mini-cat="false" />
+      </schema-mapping>
+    </data-source>
+    <data-source name="varmland_scs" uuid="e6b805cc-5d83-47dd-8933-f0d4db608f94">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="CLICKHOUSE" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="merida_avl_tableau_user" uuid="3e0748f1-b8e5-4268-9fcf-40068c615bfa">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="SRTA AVL PROD" uuid="e3df5415-c452-4ef4-8286-e8552e4ac3b2">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="STAR PROD AFC" uuid="79fd0091-0826-491f-b3ed-d699db36b2aa">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="default 2" uuid="52bb3b20-2d1c-4c0a-b307-a5ab3b05e932">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="CLICKHOUSE" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="postgres" uuid="2d63fa41-0fed-4c51-be0c-a1033c53a0fc">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="VeloDB" uuid="7f55c2f4-df83-4063-8957-8f5ba7214ed4">
+      <database-info product="MySQL" version="5.7.99" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-9.5.0 (Revision: a7b3c94f50efbddb9f0dd69b3e0d1aaa25305cd6)" dbms="MYSQL" exact-version="5.7.99" exact-driver-version="9.5">
+        <extra-name-characters>$</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>admin</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" negative="1" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="lb-65046533-579518abc9e8f174.elb.eu-central-1.amaz" uuid="ac64552b-8483-40d4-a1d4-7676197b96bb">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="stevedb@localhost" uuid="dc5d3fe0-82e5-492c-8010-3e1897b00e22">
+      <database-info product="MariaDB" version="10.4.30-MariaDB-1:10.4.30+maria~ubu2004" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.5.7" dbms="MARIADB" exact-version="10.4.30" exact-driver-version="3.5">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>steve</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" negative="1" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>
