@@ -7,7 +7,7 @@ echo "=== Ubuntu Dev Environment Setup ==="
 echo ""
 
 # --- 1. SSH key ---
-echo "[1/11] SSH key setup..."
+echo "[1/13] SSH key setup..."
 if [ -f "$HOME/.ssh/id_ed25519" ]; then
     echo "  -> SSH key already exists"
 else
@@ -37,7 +37,7 @@ else
 fi
 
 # --- 2. Install packages ---
-echo "[2/11] Installing packages..."
+echo "[2/13] Installing packages..."
 sudo apt update
 sudo apt install -y \
     zsh \
@@ -56,7 +56,7 @@ sudo apt update
 sudo apt install -y neovim
 
 # --- 3. Install NVM + Node ---
-echo "[3/11] Installing NVM + Node..."
+echo "[3/13] Installing NVM + Node..."
 if [ -d "$HOME/.nvm" ]; then
     echo "  -> NVM already installed"
 else
@@ -71,7 +71,7 @@ echo "  -> Node $(node --version) installed"
 npm install -g tree-sitter-cli
 
 # --- 4. Install Ghostty ---
-echo "[4/11] Installing Ghostty..."
+echo "[4/13] Installing Ghostty..."
 if command -v ghostty &>/dev/null; then
     echo "  -> Ghostty already installed"
 else
@@ -84,7 +84,7 @@ else
 fi
 
 # --- 5. Install Claude Code ---
-echo "[5/11] Installing Claude Code..."
+echo "[5/13] Installing Claude Code..."
 if command -v claude &>/dev/null; then
     echo "  -> Claude Code already installed"
 else
@@ -93,7 +93,7 @@ else
 fi
 
 # --- 6. Set zsh as default shell ---
-echo "[6/11] Setting zsh as default shell..."
+echo "[6/13] Setting zsh as default shell..."
 if [ "$SHELL" != "$(which zsh)" ]; then
     chsh -s "$(which zsh)"
     echo "  -> zsh set as default shell (takes effect after next login)"
@@ -102,7 +102,7 @@ else
 fi
 
 # --- 7. Install Oh My Zsh ---
-echo "[7/11] Installing Oh My Zsh..."
+echo "[7/13] Installing Oh My Zsh..."
 if [ -d "$HOME/.oh-my-zsh" ]; then
     echo "  -> already installed"
 else
@@ -110,7 +110,7 @@ else
 fi
 
 # --- 8. Copy configs ---
-echo "[8/11] Copying configs..."
+echo "[8/13] Copying configs..."
 
 # Ghostty
 mkdir -p ~/.config/ghostty
@@ -145,7 +145,7 @@ cp "$SCRIPT_DIR/configs/nvim/lua/plugins/lang-sql.lua" ~/.config/nvim/lua/plugin
 echo "  -> LazyVim config"
 
 # --- 9. Install scripts + plugins ---
-echo "[9/11] Installing scripts and plugins..."
+echo "[9/13] Installing scripts and plugins..."
 
 # Scripts
 mkdir -p ~/.local/bin
@@ -170,13 +170,33 @@ echo "  -> Installing neovim plugins (headless)..."
 nvim --headless "+Lazy! sync" +qa 2>/dev/null || true
 echo "  -> neovim plugins installed"
 
-# --- 10. DataGrip + database connections ---
-echo "[10/11] Installing DataGrip..."
-if command -v datagrip &>/dev/null || snap list datagrip &>/dev/null 2>&1; then
+# --- 10. JetBrains IDEs ---
+echo "[10/13] Installing JetBrains IDEs..."
+
+# DataGrip
+if snap list datagrip &>/dev/null 2>&1; then
     echo "  -> DataGrip already installed"
 else
     sudo snap install datagrip --classic
-    echo "  -> DataGrip installed via snap"
+    echo "  -> DataGrip installed"
+fi
+
+# IntelliJ IDEA Ultimate
+echo "[11/13] Installing IntelliJ IDEA..."
+if snap list intellij-idea-ultimate &>/dev/null 2>&1; then
+    echo "  -> IntelliJ IDEA already installed"
+else
+    sudo snap install intellij-idea-ultimate --classic
+    echo "  -> IntelliJ IDEA installed"
+fi
+
+# PyCharm Professional
+echo "[12/13] Installing PyCharm..."
+if snap list pycharm-professional &>/dev/null 2>&1; then
+    echo "  -> PyCharm already installed"
+else
+    sudo snap install pycharm-professional --classic
+    echo "  -> PyCharm installed"
 fi
 
 # Restore DataGrip project with all database connections
@@ -186,8 +206,8 @@ cp "$SCRIPT_DIR/configs/datagrip/dataSources.xml" ~/DataGripProjects/Ridango/.id
 cp "$SCRIPT_DIR/configs/datagrip/dataSources.local.xml" ~/DataGripProjects/Ridango/.idea/dataSources.local.xml
 echo "  -> All database connections restored (passwords need re-entering)"
 
-# --- 11. Claude Code multi-account ---
-echo "[11/11] Setting up Claude Code..."
+# --- 13. Claude Code multi-account ---
+echo "[13/13] Setting up Claude Code..."
 mkdir -p ~/.claude-private
 echo "  -> ~/.claude-private created"
 
