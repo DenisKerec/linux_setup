@@ -7,7 +7,7 @@ echo "=== Ubuntu Dev Environment Setup ==="
 echo ""
 
 # --- 1. SSH key ---
-echo "[1/13] SSH key setup..."
+echo "[1/15] SSH key setup..."
 if [ -f "$HOME/.ssh/id_ed25519" ]; then
     echo "  -> SSH key already exists"
 else
@@ -37,7 +37,7 @@ else
 fi
 
 # --- 2. Install packages ---
-echo "[2/13] Installing packages..."
+echo "[2/15] Installing packages..."
 sudo apt update
 sudo apt install -y \
     zsh \
@@ -56,7 +56,7 @@ sudo apt update
 sudo apt install -y neovim
 
 # --- 3. Install NVM + Node ---
-echo "[3/13] Installing NVM + Node..."
+echo "[3/15] Installing NVM + Node..."
 if [ -d "$HOME/.nvm" ]; then
     echo "  -> NVM already installed"
 else
@@ -71,7 +71,7 @@ echo "  -> Node $(node --version) installed"
 npm install -g tree-sitter-cli
 
 # --- 4. Install Ghostty ---
-echo "[4/13] Installing Ghostty..."
+echo "[4/15] Installing Ghostty..."
 if command -v ghostty &>/dev/null; then
     echo "  -> Ghostty already installed"
 else
@@ -84,7 +84,7 @@ else
 fi
 
 # --- 5. Install Claude Code ---
-echo "[5/13] Installing Claude Code..."
+echo "[5/15] Installing Claude Code..."
 if command -v claude &>/dev/null; then
     echo "  -> Claude Code already installed"
 else
@@ -93,7 +93,7 @@ else
 fi
 
 # --- 6. Set zsh as default shell ---
-echo "[6/13] Setting zsh as default shell..."
+echo "[6/15] Setting zsh as default shell..."
 if [ "$SHELL" != "$(which zsh)" ]; then
     chsh -s "$(which zsh)"
     echo "  -> zsh set as default shell (takes effect after next login)"
@@ -102,7 +102,7 @@ else
 fi
 
 # --- 7. Install Oh My Zsh ---
-echo "[7/13] Installing Oh My Zsh..."
+echo "[7/15] Installing Oh My Zsh..."
 if [ -d "$HOME/.oh-my-zsh" ]; then
     echo "  -> already installed"
 else
@@ -110,7 +110,7 @@ else
 fi
 
 # --- 8. Copy configs ---
-echo "[8/13] Copying configs..."
+echo "[8/15] Copying configs..."
 
 # Ghostty
 mkdir -p ~/.config/ghostty
@@ -145,7 +145,7 @@ cp "$SCRIPT_DIR/configs/nvim/lua/plugins/lang-sql.lua" ~/.config/nvim/lua/plugin
 echo "  -> LazyVim config"
 
 # --- 9. Install scripts + plugins ---
-echo "[9/13] Installing scripts and plugins..."
+echo "[9/15] Installing scripts and plugins..."
 
 # Scripts
 mkdir -p ~/.local/bin
@@ -171,7 +171,7 @@ nvim --headless "+Lazy! sync" +qa 2>/dev/null || true
 echo "  -> neovim plugins installed"
 
 # --- 10. JetBrains IDEs ---
-echo "[10/13] Installing JetBrains IDEs..."
+echo "[10/15] Installing JetBrains IDEs..."
 
 # DataGrip
 if snap list datagrip &>/dev/null 2>&1; then
@@ -182,7 +182,7 @@ else
 fi
 
 # IntelliJ IDEA Ultimate
-echo "[11/13] Installing IntelliJ IDEA..."
+echo "[11/15] Installing IntelliJ IDEA..."
 if snap list intellij-idea-ultimate &>/dev/null 2>&1; then
     echo "  -> IntelliJ IDEA already installed"
 else
@@ -191,7 +191,7 @@ else
 fi
 
 # PyCharm Professional
-echo "[12/13] Installing PyCharm..."
+echo "[12/15] Installing PyCharm..."
 if snap list pycharm-professional &>/dev/null 2>&1; then
     echo "  -> PyCharm already installed"
 else
@@ -263,7 +263,7 @@ done
 rm -f "$GRUVBOX_JAR"
 
 # --- 13. VS Code ---
-echo "[13/14] Installing VS Code..."
+echo "[13/15] Installing VS Code..."
 if command -v code &>/dev/null; then
     echo "  -> VS Code already installed"
 else
@@ -286,8 +286,37 @@ while IFS= read -r ext; do
 done < "$SCRIPT_DIR/configs/vscode-extensions.txt"
 echo "  -> VS Code extensions installed"
 
-# --- 14. Claude Code multi-account ---
-echo "[14/14] Setting up Claude Code..."
+# --- 14. KVM/QEMU virtualization ---
+echo "[14/15] Installing KVM/QEMU virtualization..."
+sudo apt install -y \
+    cpu-checker \
+    qemu-kvm \
+    qemu-utils \
+    libvirt-daemon-system \
+    libvirt-clients \
+    virt-manager \
+    ovmf \
+    swtpm \
+    swtpm-tools
+
+# Add user to virtualization groups
+sudo usermod -aG libvirt "$USER"
+sudo usermod -aG kvm "$USER"
+echo "  -> Added $USER to libvirt and kvm groups"
+
+# Enable and start libvirtd
+sudo systemctl enable --now libvirtd
+echo "  -> libvirtd service enabled and started"
+
+# Verify KVM support
+if kvm-ok 2>/dev/null | grep -q "can be used"; then
+    echo "  -> KVM acceleration available"
+else
+    echo "  -> WARNING: KVM acceleration may not be available (check BIOS VT-x setting)"
+fi
+
+# --- 15. Claude Code multi-account ---
+echo "[15/15] Setting up Claude Code..."
 mkdir -p ~/.claude-private
 echo "  -> ~/.claude-private created"
 
@@ -296,11 +325,12 @@ echo ""
 echo "=== Setup complete! ==="
 echo ""
 echo "Next steps:"
-echo "  1. Log out and back in (for zsh to take effect)"
+echo "  1. Log out and back in (for zsh + libvirt/kvm groups to take effect)"
 echo "  2. Open DataGrip -> Open project ~/DataGripProjects/Ridango -> re-enter passwords"
 echo "  3. Run 'claude' to log in to your work Claude account"
 echo "  4. Run 'claude-private' to log in to your private Claude account"
 echo "  5. Type 'dev' to start your dev session"
+echo "  6. Open 'virt-manager' to create a Windows VM (download a Windows ISO first)"
 echo ""
 echo "Aliases:"
 echo "  dev             — tmux dev session (neovim + claude + terminal)"
